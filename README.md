@@ -27,6 +27,10 @@ Import codegen’d helpers from the crate root, e.g. `chronon_spectra_telemetry:
 - `install_from_env` / `SpectraTelemetrySink` for host wiring
 - `sink_forward` onto typed Spectra recorders
 
+## Examples
+
+Runnable smoke: [examples/README.md](examples/README.md).
+
 ## Verify
 
 ```bash
