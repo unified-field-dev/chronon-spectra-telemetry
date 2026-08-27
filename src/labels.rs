@@ -126,10 +126,7 @@ pub fn deployment_shape_from_env() -> &'static str {
             return sanitize_deployment_shape(t);
         }
     }
-    if std::env::var("CHRONON_REMOTE_BASE_URL")
-        .ok()
-        .is_some_and(|v| !v.trim().is_empty())
-    {
+    if std::env::var("CHRONON_REMOTE_BASE_URL").is_ok_and(|v| !v.trim().is_empty()) {
         return "remote_client";
     }
     "embedded"
