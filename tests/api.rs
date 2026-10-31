@@ -141,7 +141,7 @@ fn topic_constants_are_non_empty_happy() {
         CHRONON_REMOTE_ERRORS_TOPIC,
         CHRONON_PARTITION_ASSIGNMENTS_TOPIC,
     ] {
-        assert!(!topic.is_empty());
+        assert_ne!(topic, "");
         assert!(
             topic.starts_with("spectra.metric."),
             "unexpected metric topic: {topic}"
@@ -156,7 +156,7 @@ fn topic_constants_are_non_empty_happy() {
         CHRONON_EXECUTOR_ERROR_TOPIC,
         CHRONON_SCHEDULER_LOG_TOPIC,
     ] {
-        assert!(!topic.is_empty());
+        assert_ne!(topic, "");
         assert!(
             topic.starts_with("spectra.event."),
             "unexpected event topic: {topic}"

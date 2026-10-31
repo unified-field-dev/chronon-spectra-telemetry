@@ -24,6 +24,8 @@ Required PR job `quality`:
 | Clippy | `cargo clippy --all-targets --all-features -- -D warnings` |
 | Test | `cargo test --all-features` |
 | cargo doc | `RUSTDOCFLAGS="-D warnings" cargo doc --no-deps --all-features` |
+| cargo deny | `cargo deny check` |
+| cargo audit | `cargo audit` |
 
 ## Unit + integration (CI)
 
@@ -32,6 +34,8 @@ cargo fmt --all -- --check
 cargo clippy --all-targets --all-features -- -D warnings
 cargo test --all-features
 RUSTDOCFLAGS="-D warnings" cargo doc --no-deps --all-features
+cargo deny check
+cargo audit
 ```
 
 ### TEST_MAP
