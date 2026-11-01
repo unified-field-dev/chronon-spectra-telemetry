@@ -81,7 +81,7 @@ pub fn install_from_env() -> Arc<dyn TelemetrySink> {
 }
 
 /// Compatibility alias for older call sites; prefer [`install_from_env`].
-#[deprecated(note = "renamed to install_from_env")]
+#[deprecated(since = "0.1.0", note = "renamed to install_from_env")]
 pub fn install_ops_log_from_env() -> Arc<dyn TelemetrySink> {
     install_from_env()
 }
